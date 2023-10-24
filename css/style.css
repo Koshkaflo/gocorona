@@ -62,6 +62,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* ----------------------------------- */
+
 /* main */
 body {
     font-family: 'Rubik', sans-serif;
@@ -120,14 +122,22 @@ body {
     min-height: 114px;
     align-items: center;
 }
+
+.header__logo {
+    position: relative;
+    z-index: 5;
+}
 .header__menu {
     flex: 1 1 auto;
 }
 
 .header__button {
+    position: relative;
+    z-index: 5;
     flex: 0 0 252px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -151,6 +161,10 @@ body {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.4px;
+    color: #000;
+}
+.menu__link:hover {
+    text-decoration: underline;
 }
 
 /* TABLET */
@@ -166,6 +180,41 @@ body {
     }
 }
 
+/* MOBILE */
+@media (max-width: 767.98px) {
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        padding: 90px 15px 30px 15px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .header:target .menu__body {
+        left: 0;
+    }
+    .menu__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .menu__link {
+        font-size: 20px;
+    }
+}
+
+/* MOBILE SMALL*/
+@media (max-width: 479.98px) {
+    .header__logo {
+        flex: 0 0 40px;
+        overflow: hidden;
+    }
+}
+
+/* --------------------------------------- */
 
 .button {
     display: inline-block;
@@ -195,4 +244,61 @@ body {
 .button__blue:hover {
     background: #6196eb;
     
+}
+
+
+/* ----------------------------------- */
+
+.icon-menu,
+.close-icon-menu {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .icon-menu {
+        display: flex;
+        position: relative;
+        flex: 0 0 30px;
+        height: 18px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 0 0 20px;
+    }
+
+    .close-icon-menu {
+         display: none; 
+    }
+    .icon-menu::before,
+    .icon-menu::after {
+        content: '';
+        background-color: #000;
+        height: 2px;
+    }
+
+    .icon-menu span{
+        height: 2px;
+        background-color: #000;
+    }
+
+    .close-icon-menu::before,
+    .close-icon-menu::after {
+        content: '';
+        background-color: #000;
+        height: 2px;
+        transform-origin: 0 0;
+    }
+
+    .close-icon-menu::before {
+        transform: rotate(32deg);
+    }
+    .close-icon-menu::after {
+        transform: rotate(-45deg);
+    }
+    .header:target .icon-menu {
+        display: none;
+    }
+    .header:target .close-icon-menu {
+        display: flex;
+    }
+
 }
