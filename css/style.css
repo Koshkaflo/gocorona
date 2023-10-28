@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ----------------------------------- */
 
-/* main */
+/* main nav*/
 body {
     font-family: 'Rubik', sans-serif;
     font-size: 12px;
@@ -313,4 +313,116 @@ body {
         display: flex;
     }
 
+}
+
+/* --------------------------------------------------------------------------- */
+/* -------------------------------- */
+
+.block-text {
+}
+.block-text_blue {
+}
+.block-text__title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 126%;
+    color: #000;
+}
+.block-text__title:not(:last-child) {
+    margin: 0 0 12px 0;
+}
+
+.block-text__title span{
+    color: #EC5863;
+}
+.block-text_blue span{
+    color: #4285F4;
+}
+
+.block-text__text {
+    line-height: 138.5%;
+    max-width: 300px;
+}
+.block-text__text:not(:last-child) {
+    margin: 0 0 24px 0;
+}
+.block-text__button {
+}
+
+/* -------------------------------- */
+
+/* main get started*/
+
+.get-started {
+    background: #FAFBFD;
+
+}
+.get-started__container {
+    padding: 150px 15px 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.get-started__container::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    right: 252px;
+    top: 0;
+    transform: translate(100%, 0px);
+    border-radius: 30px 0px 0px 30px;
+    background-color: #EC5863;
+}
+.get-started__content {
+    flex: 0 1 48%;
+    padding: 0 0 0 20px;
+}
+.get-started__block-text {
+    max-width: 410px;
+}
+
+.video-get-started {
+    flex: 1 1 100%;
+    padding: 0 0 0 20px;
+}
+.get-started__image {
+    flex: 0 1 52%;
+    position: relative;
+    z-index: 2;
+}
+.get-started__image img{
+    max-width: 100%;
+}
+
+.get-started__video {
+    display: inline-flex;
+    align-items: center;
+
+}
+.video-get-started__icon {
+    flex: 0 0 44px;
+}
+.video-get-started__body {
+    padding: 0 0 0 12px;
+}
+.video-get-started__title {
+    color: #B0B0B0;
+    font-size: 13px;
+    line-height: 126%;
+    letter-spacing: 1.04px;
+
+}
+.video-get-started__title:not(:last-child) {
+    margin: 0 0 5px 0;
+}
+.video-get-started__text {
+    color: #000;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 126%;
+    letter-spacing: 1.485px;
+    text-transform: uppercase;
 }
