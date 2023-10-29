@@ -188,6 +188,7 @@ body {
         left: -100%;
         width: 100%;
         height: 100%;
+        background-color:#FCFDFE;
         padding: 90px 15px 30px 15px;
         transition: left 0.3s ease 0s;
         overflow: auto;
@@ -370,15 +371,17 @@ body {
     position: absolute;
     width: 100vw;
     height: 100%;
-    right: 252px;
+    right: 267px;
     top: 0;
     transform: translate(100%, 0px);
     border-radius: 30px 0px 0px 30px;
     background-color: #EC5863;
 }
+
+
 .get-started__content {
     flex: 0 1 48%;
-    padding: 0 0 0 20px;
+    padding: 0 20px;
 }
 .get-started__block-text {
     max-width: 410px;
@@ -425,4 +428,41 @@ body {
     line-height: 126%;
     letter-spacing: 1.485px;
     text-transform: uppercase;
+}
+
+
+@media (max-width: 991.98px){
+    .get-started__container::before {
+        right: 185px;
+        border-radius: 20px 0px 0px 20px;
+    }
+        
+}
+
+@media (max-width: 767.98px){
+    .get-started__container {
+        padding: 100px 15px 30px 15px;
+    }
+    .get-started__container::before {
+        display: none;
+    }
+    .get-started__block-text {
+        max-width: none;
+    }
+    .get-started__content {
+        flex: 1 1 100%;
+        padding: 0;
+    }
+    .get-started__image {
+        flex: 1 1 100%;
+        padding: 30px 0;
+        text-align: center;
+    }
+    .get-started__video {
+        padding: 0;
+    }
+    .block-text__title {
+        font-size: 36px;
+    }
+        
 }
