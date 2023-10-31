@@ -593,8 +593,6 @@ body {
     margin: 0 auto;
     position: relative;
 }
-.experts__body {
-}
 
 .experts__content {
     display: flex;
@@ -618,6 +616,9 @@ body {
     top: 0;
     left: 0;
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 18px 0px rgba(88, 126, 236, 0.18);
+
 }
 
 .statistics-experts__body {
@@ -685,4 +686,36 @@ body {
     line-height: 1.8;
     letter-spacing: 4.07px;
     text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .experts {
+        padding: 80px 0 116px 0;
+    }
+    .experts__content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .experts__video {
+        padding: 0 0 55% 0;
+    }
+    .experts__block-text {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .statistics-experts__body {
+        margin: 0 0 50px 0;
+    }
+    .body-statistics-experts {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .body-statistics-experts {
+       flex-direction: column;
+    }
+    .body-statistics-experts__item:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
 }
